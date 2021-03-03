@@ -1,0 +1,9 @@
+{
+  "name": "fat-whiteboard",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Tomas Aprile <taprile@kovix-group.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["backend", "frontend"]
+}
