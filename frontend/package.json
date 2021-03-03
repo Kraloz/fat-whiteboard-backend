@@ -1,9 +1,16 @@
 {
   "name": "frontend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build"
+  },
   "dependencies": {
     "socket.io-client": "^3.1.2"
+  },
+  "devDependencies": {
+    "snowpack": "^3.0.13"
   }
 }
