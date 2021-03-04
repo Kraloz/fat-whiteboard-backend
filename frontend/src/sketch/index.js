@@ -1,35 +1,38 @@
-export const sketch = (p) => {
+// export const sketch = (p) => {
 
-  const BRUSH_SIZE = 20;
-  let lastX, lastY;
+//   const BRUSH_SIZE = 20;
 
-  const clearCanvas = () => {
-    p.background(0)
-  }
+//   const clearCanvas = () => {
+//     p.background(0);
+//   };
 
-  p.setup = () => {
-    p.createCanvas(400, 400);
-    p.background(0);
+//   paintAndSend = (...args) => {
+//     p.line(...args);
+//     sendMouse(...args);
+//   };
 
-    const button = p.createButton('❌');
-    button.position(p.width - 39, 19);
-    button.mousePressed(clearCanvas);
-  };
+//   const sendMouse = (mouseCoords) => {
+    
+//   };
 
-  p.draw = () => {
-    p.noStroke();
-    const d = p.dist(lastX, lastY, p.mouseX, p.mouseY);
-    if (p.mouseIsPressed) {
-      for (let i = 0; i <= d; i++) {
-        const nX = p.lerp(lastX, p.mouseX, i / d);
-        const nY = p.lerp(lastY, p.mouseY, i / d);
-        p.ellipse(nX, nY, BRUSH_SIZE, BRUSH_SIZE);
-      }
-      p.fill(255);
-      p.ellipse(p.mouseX, p.mouseY, BRUSH_SIZE, BRUSH_SIZE);
-    }
 
-    lastX = p.mouseX;
-    lastY = p.mouseY;
-  }
-}
+//   p.setup = () => {
+//     p.createCanvas(400, 400);
+//     p.background(0);
+
+//     const button = p.createButton('❌');
+//     button.position(p.width - 39, 19);
+//     button.mousePressed(clearCanvas);
+//   };
+
+//   p.mouseDragged = () => {
+//     p.stroke(255);
+//     p.strokeWeight(BRUSH_SIZE);
+//     paintAndSend({
+//       x: p.mouseX,
+//       y: p.mouseY,
+//       pX: p.pmouseX,
+//       pY: p.pmouseY
+//     });
+//   }
+// }
