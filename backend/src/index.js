@@ -14,13 +14,16 @@ const io = new SocketIoServer(server, {
   }
 });
 
-io.on("connection", (socket) => {
-  console.log("client connected");
+io.sockets.on('connection', (socket) => {
+  console.log('Client connected: ' + socket.id);
 
-  socket.on("xd", (msg) => {
-    if (!msg) return;
-
-    msg();
+  socket.on('mouse', (data) => {
+    socket.broadcast.emit('mouse', data);
   });
 
+  socket.on('clear', (data) => {
+    socket.broadcast.emit('clear');
+  });
+
+  socket.on('disconnect', () => console.log('Client has disconnected'));
 });
