@@ -1,9 +1,17 @@
 {
-  "name": "fat-whiteboard",
-  "version": "0.0.1",
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
-  "author": "Tomas Aprile <taprile@kovix-group.com>",
   "license": "MIT",
-  "private": true,
-  "workspaces": ["backend", "frontend"]
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.1.2"
+  },
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
